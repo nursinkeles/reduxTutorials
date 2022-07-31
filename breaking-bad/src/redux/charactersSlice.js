@@ -39,7 +39,7 @@ export const charactersSlice = createSlice({
     },
     [fetchCharacters.rejected]: (state, action) => {
       state.status = "failed";
-      action.error = state.error.message;
+      state.error = action.error.message;
     },
   },
 });
